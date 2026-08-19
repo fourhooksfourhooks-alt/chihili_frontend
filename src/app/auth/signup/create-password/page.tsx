@@ -70,7 +70,7 @@ function CreatePasswordContent() {
     };
 
     try {
-      const result = await axios.post("https://chihili-backend.onrender.com/api/auth/create-password", payload);
+      const result = await axios.post("https://chihili-backend.onrender.com/api/v1/auth/create-password", payload);
       if (result.status === 200) {
         setSuccess("Password created successfully.");
         setTimeout(() => {
