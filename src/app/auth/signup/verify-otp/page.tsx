@@ -93,7 +93,7 @@ function EnterOtpContent() {
     }
     
     try {
-      const result = await axios.post("https://chihili-backend.onrender.com/api/v1/auth/resend-otp", payload);
+      const result = await axios.post("https://chihili-backend.onrender.com/api/auth/resend-otp", payload);
       if (result.status === 200) {
         setResendMessage("OTP resent successfully!");
         startTimer(); // Restart the timer after successful resend
@@ -138,7 +138,7 @@ function EnterOtpContent() {
     }
     
     try {
-      const result = await axios.post("https://chihili-backend.onrender.com/api/v1/auth/verify-otp", payload);
+      const result = await axios.post("https://chihili-backend.onrender.com/api/auth/verify-otp", payload);
       if (result.status === 200) {
         // Clear timer on successful verification
         if (timerRef.current) {
