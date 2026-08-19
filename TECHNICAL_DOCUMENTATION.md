@@ -407,7 +407,7 @@ The application uses a centralized axios instance with interceptors.
 
 1. **Base URL Configuration**
    ```typescript
-   baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || "https://api.chihili.com/api"
+   baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || "https://chihili-backend.onrender.com/api"
    ```
 
 2. **Credentials Support**
@@ -1285,7 +1285,7 @@ html {
 
 ```bash
 # API Configuration
-NEXT_PUBLIC_API_BASE_URL=https://api.chihili.com/api
+NEXT_PUBLIC_API_BASE_URL=https://chihili-backend.onrender.com/api
 
 # Firebase Configuration (already in firebaseConfig.ts)
 # These are public as they're client-side
@@ -1658,13 +1658,13 @@ npm run export
 
 ```bash
 # Set in hosting platform
-NEXT_PUBLIC_API_BASE_URL=https://api.chihili.com/api
+NEXT_PUBLIC_API_BASE_URL=https://chihili-backend.onrender.com/api
 
 # Vercel
 vercel env add NEXT_PUBLIC_API_BASE_URL
 
 # Docker
-docker run -e NEXT_PUBLIC_API_BASE_URL=https://api.chihili.com/api ...
+docker run -e NEXT_PUBLIC_API_BASE_URL=https://chihili-backend.onrender.com/api ...
 ```
 
 ### Performance Optimization
@@ -1701,7 +1701,7 @@ const HeavyComponent = dynamic(() => import('@/components/HeavyComponent'), {
 export const revalidate = 60;
 
 // Or per request
-fetch('https://api.chihili.com/products', {
+fetch('https://chihili-backend.onrender.com/products', {
   next: { revalidate: 3600 } // 1 hour
 });
 ```
