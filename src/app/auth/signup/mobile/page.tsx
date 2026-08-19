@@ -19,7 +19,7 @@ export default function SignupWithEmail() {
     event.preventDefault();
     try {
       // const result = signup({ mobile: "91"+ mobile });
-      const result = await axios.post("https://chihili-backend.onrender.com/api/auth/signup", {
+      const result = await axios.post("https://chihili-backend.onrender.com/api/v1/auth/signup", {
         mobile: "91" + mobile,
       });
       // On success, redirect to OTP page

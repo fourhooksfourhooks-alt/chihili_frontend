@@ -407,7 +407,7 @@ The application uses a centralized axios instance with interceptors.
 
 1. **Base URL Configuration**
    ```typescript
-   baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || "https://chihili-backend.onrender.com/api"
+   baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || "https://chihili-backend.onrender.com/api/v1"
    ```
 
 2. **Credentials Support**
@@ -1285,7 +1285,7 @@ html {
 
 ```bash
 # API Configuration
-NEXT_PUBLIC_API_BASE_URL=https://chihili-backend.onrender.com/api
+NEXT_PUBLIC_API_BASE_URL=https://chihili-backend.onrender.com/api/v1
 
 # Firebase Configuration (already in firebaseConfig.ts)
 # These are public as they're client-side
@@ -1658,13 +1658,13 @@ npm run export
 
 ```bash
 # Set in hosting platform
-NEXT_PUBLIC_API_BASE_URL=https://chihili-backend.onrender.com/api
+NEXT_PUBLIC_API_BASE_URL=https://chihili-backend.onrender.com/api/v1
 
 # Vercel
 vercel env add NEXT_PUBLIC_API_BASE_URL
 
 # Docker
-docker run -e NEXT_PUBLIC_API_BASE_URL=https://chihili-backend.onrender.com/api ...
+docker run -e NEXT_PUBLIC_API_BASE_URL=https://chihili-backend.onrender.com/api/v1 ...
 ```
 
 ### Performance Optimization
